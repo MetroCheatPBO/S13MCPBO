@@ -121,8 +121,6 @@ touch /storage/emulated/0/Android/data/$PKG/cache > /dev/null 2>&1
 touch /storage/emulated/0/Android/data/$PKG/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs > /dev/null 2>&1
 touch /storage/emulated/0/Android/data/$PKG/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/UpdateInfo > /dev/null 2>&1
 touch /storage/emulated/0/Android/data/$PKG/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/puffer_temp > /dev/null 2>&1
-mkdir /storage/emulated/0/Android/data/$PKG/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/PufferFileList.json
-mkdir /storage/emulated/0/Android/data/$PKG/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/puffer_res.eifs
 }
 
 instal()
@@ -139,11 +137,6 @@ echo "╔═══════════════════════�
 echo "|✪Replacing File Data Crash...                   |"
 echo "╚══════════════════════════════╝"
 sleep 3
-echo ""
-echo -n "ʟᴏᴀᴅɪɴɢ" ; sleep .1 ; echo -n ".." ; sleep .2 ; echo -n "." ; sleep .2 ; echo -n ".." ; sleep .1
-echo ""
-echo -n "" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; echo -n "█" ; echo -n "█" ; sleep .1 ; 
-echo ""
 BUSYBOX=/sbin/.magisk/busybox/
 rm -rf /data/data/com.tencent.ig/app_crashrecord &> /dev/null
 touch /data/data/com.tencent.ig/app_crashrecord &> /dev/null
