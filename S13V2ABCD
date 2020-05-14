@@ -84,9 +84,9 @@ sleep 10
 BackUpData()
 {
 echo ""
-cp -R /storage/emulated/0/MCPBO_v2_S13/Ori/game_patch_0.18.0.12606.pak /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.18.0.12606.pak
-cp -R /storage/emulated/0/MCPBO_v2_S13/Ori/game_patch_0.18.0.12620.pak /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.18.0.12620.pak
-cp -R /storage/emulated/0/MCPBO_v2_S13/Ori/game_patch_0.18.0.12621.pak /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.18.0.12621.pak
+cp -R /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.18.0.12606.pak /storage/emulated/0/MCPBO_v2_S13/Ori/
+cp -R /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.18.0.12620.pak /storage/emulated/0/MCPBO_v2_S13/Ori/
+cp -R /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.18.0.12621.pak /storage/emulated/0/MCPBO_v2_S13/Ori/
 }
 
 DataMod()
@@ -341,6 +341,7 @@ fi
 sleep 1
 done
 ((final=$COUNT/60))
+am force-stop com.xbvqitfebbloqbyh
 am start -n bin.mt.plus/bin.mt.plus.Main
 echo ""
 echo "╔══════════════════════════════╗"
@@ -348,7 +349,6 @@ printf "✪Game Stoped, Waktu Bermain Anda ";
 echo $final "Minutes ";
 echo "╚══════════════════════════════╝"
 BackOnOri
-am force-stop com.xbvqitfebbloqbyh
 echo ""
 echo "╔══════════════════════════════╗"
 echo "|✪Closing GameGuardian                           |"
@@ -379,7 +379,7 @@ echo ""
 echo "╔══════════════════════════════╗"
 echo "| © Coding By :                                  |"
 echo "╚══════════════════════════════╝"
-echo "• Creator 𝙼𝚎𝚝𝚛𝚘𝙲𝚑𝚎𝚊𝚝_𝙿𝙱𝙾™  - @gHesss_Boys"
+echo "• Creator MetroCheat_PBO - [MCPBO™]"
 echo ""      
 echo ""
 echo ""
