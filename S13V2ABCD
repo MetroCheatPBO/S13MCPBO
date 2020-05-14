@@ -291,7 +291,6 @@ echo -n "Device Chipset											: "
 getprop ro.hardware
 echo ""
 sleep 3
-instal
 echo ""
 echo "╔══════════════════════════════╗"
 echo "| ✪[RULES]                                       |"
@@ -318,6 +317,7 @@ am start -n com.xbvqitfebbloqbyh/com.xbvqitfebbloqbyh.MainActivity
 sleep 2
 am start -n bin.mt.plus/bin.mt.plus.Main
 sleep 3
+instal
 echo "╔══════════════════════════════╗"
 echo "|✪Starting PUBG MOBILE GLOBAL                    |"
 echo "╚══════════════════════════════╝"
@@ -328,8 +328,7 @@ echo ""
 echo -n "" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; echo -n "█" ; echo -n "█" ; sleep .1 ; 
 echo ""
 am start -n com.tencent.ig/com.epicgames.ue4.SplashActivity
-chmod 000 /data/data/com.tencent.ig/files/tss_tmp/* &> /dev/null
-sleep 70
+sleep 30
 PACKAGE='com.tencent.ig'
 while [ $(pidof $PACKAGE) ]
 do
@@ -338,10 +337,11 @@ Logcleaner
 if [ ! $(pidof $PACKAGE) ]; then
 break
 fi
-sleep 1
+sleep 10
 done
 ((final=$COUNT/60))
 am force-stop com.xbvqitfebbloqbyh
+sleep 1
 am start -n bin.mt.plus/bin.mt.plus.Main
 echo ""
 echo "╔══════════════════════════════╗"
@@ -356,7 +356,7 @@ echo "╚═══════════════════════�
 echo ""
 sleep 1
 echo "╔══════════════════════════════╗"
-echo "|✪PROSES REPAIR DAN CLEARING CACHE               |"
+echo "|✪PROSES FULL REPAIR DAN CLEARING CACHE          |"
 echo "╚══════════════════════════════╝"
 echo "[✔] Repairs Paks and Permission to Default !!!  "
 echo "[✔] Membersihkan Cache - Data                   "
