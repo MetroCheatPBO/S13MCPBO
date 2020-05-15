@@ -91,7 +91,6 @@ cp -R /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTracke
 
 DataMod()
 {
-BUSYBOX=/sbin/.magisk/busybox/
 rm -rf /data/data/com.tencent.ig/app_crashrecord
 touch /data/data/com.tencent.ig/app_crashrecord
 sleep 0
@@ -113,13 +112,11 @@ rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/ProgramBinaryCache
 rm -rf /storage/emulated/0/.backups/com.tencent.ig/helpshift/databases
 rm -rf /storage/emulated/0/Android/data/com.tencent.ig/cache
 rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/tbslog
-$BUSYBOX/chattr -i /storage/emulated/0/.backups/com.tencent.ig &> /dev/null
 rm -rf /data/data/com.tencent.ig/databases/tdm.db
 rm -rf /data/data/com.tencent.ig/databases/beacon_db
 rm -rf /data/data/com.tencent.ig/databases/bugly_db_
 rm -rf /data/data/com.tencent.ig/databases/config.db
 rm -rf /data/data/com.tencent.ig/databases/iMSDK.db
-$BUSYBOX/chattr -i /storage/emulated/0/tencent/Midas/Log/com.tencent.ig &> /dev/null
 rm -rf /storage/emulated/0/.backups/com.tencent.ig/helpshift/databases/__hs__backup_dao_storage
 rm -rf /storage/emulated/0/Tencent/beacon/meta.dat
 rm -rf /storage/emulated/0/MidasOversea/GUID
@@ -129,6 +126,7 @@ rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/login-identifier.tx
 rm -rf /storage/emulated/0/Android/data/com.tencent.ig/cache
 rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/tbslog
 rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs
+sleep 5
 }
 
 instal()
@@ -328,7 +326,7 @@ echo ""
 echo -n "" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; echo -n "█" ; echo -n "█" ; sleep .1 ; 
 echo ""
 am start -n com.tencent.ig/com.epicgames.ue4.SplashActivity
-sleep 30
+sleep 20
 PACKAGE='com.tencent.ig'
 while [ $(pidof $PACKAGE) ]
 do
