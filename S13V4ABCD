@@ -1,0 +1,319 @@
+COUNT=50
+
+clearcache()
+{
+rm -rf /sdcard/Android/data/com.*/cache
+rm -rf /sdcard/Android/data/bin.*/cache
+rm -rf /sdcard/Android/data/by.*/cache
+rm -rf /sdcard/Android/data/ru.*/cache
+rm -rf /sdcard/Android/data/eu.*/cache
+rm -rf /sdcard/Android/data/org.*/cache
+rm -rf /sdcard/Android/data/tv.*/cache
+rm -rf /sdcard/Android/data/net.*/cache
+echo "╔══════════════════════════════╗"
+echo "| • Clear Cache 25%                              |"
+echo "╚══════════════════════════════╝"
+sleep 1
+rm -rf /sdcard/Android/data/*/cache
+echo "╔══════════════════════════════╗"
+echo "| • Clear Cache 50%                              |"
+echo "╚══════════════════════════════╝"
+sleep 1
+rm -rf /data/data/com.*/cache
+rm -rf /data/data/bin.*/cache
+rm -rf /data/data/by.*/cache
+rm -rf /data/data/ru.*/cache
+rm -rf /data/data/eu.*/cache
+rm -rf /data/data/org.*/cache
+rm -rf /data/data/tv.*/cache
+rm -rf /data/data/net.*/cache
+echo "╔══════════════════════════════╗"
+echo "| • Clear Cache 75%                              |"
+echo "╚══════════════════════════════╝"
+sleep 2
+am force-stop com.tencent.ig
+rm -rf /data/data/*/cache
+echo "╔══════════════════════════════╗"
+echo "| • Clear Cache 100%                             |"
+echo "╚══════════════════════════════╝"
+echo ""
+echo -n "ʟᴏᴀᴅɪɴɢ" ; sleep .1 ; echo -n ".." ; sleep .2 ; echo -n "." ; sleep .2 ; echo -n ".." ; sleep .1
+echo ""
+echo -n "" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; echo -n "█" ; echo -n "█" ; sleep .1 ; 
+echo ""
+echo ""
+echo "[✔] ALL DONE!!!"
+}
+
+Logcleaner()
+{
+rm -rf /data/data/com.tencent.ig/shared_prefs/MidasOverseaIP.xml > /dev/null 2>&1
+rm -rf /data/data/com.tencent.ig/shared_prefs/HSJsonData.xml > /dev/null 2>&1
+rm -rf /data/data/com.tencent.ig/shared_prefs/gsdk_prefs.xml > /dev/null 2>&1
+rm -rf /data/data/com.tencent.ig/shared_prefs/crashrecord.xml > /dev/null 2>&1
+rm -rf /data/data/com.tencent.ig/shared_prefs/BuglySdkInfos.xml > /dev/null 2>&1
+rm -rf /data/data/com.tencent.ig/shared_prefs/com.google.android.gms.appid.xml > /dev/null 2>&1
+rm -rf /cache/magisk.log &> /dev/null
+rm -rf /cache/magisk.log.bak &> /dev/null
+echo " "
+date "+%a %d %b %Y %Z %H:%M:%S"
+echo "╔══════════════════════════════╗"
+echo "| ✪ Blocking Abnormal - By 𝙼𝚎𝚝𝚛𝚘𝙲𝚑𝚎𝚊𝚝_𝙿𝙱𝙾™    [✓]|"
+echo "╚══════════════════════════════╝"
+sleep 10
+}
+
+
+instal()
+{
+if [ ! -d "/data/data/com.tencent.ig" ];
+then
+echo "- PUBGM GLOBAL Tidak Terinstall"
+echo "- Silahkan Install Terlebih Dahulu Apk PUBG GLOBAL 0.18.0"
+exit 0;
+fi
+echo "╔══════════════════════════════╗"
+echo "|✪Blocking Detection Data...                      |"
+echo "╚══════════════════════════════╝"
+sleep 2
+sd=storage/emulated/0
+DATA1=storage/emulated/0/Android/data/com.tencent.ig
+DATA2=storage/emulated/0/Android/data/com.tencent.ig/files
+DATA3=storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra
+DATA4=storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra
+DATA5=storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved
+PAKS=data/media/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks
+BUSYBOX=/sbin/.magisk/busybox/
+#
+rm -rf /data/data/com.tencent.ig/app_crashrecord &> /dev/null
+touch /data/data/com.tencent.ig/app_crashrecord &> /dev/null
+rm -rf /storage/emulated/0/.backups/com.tencent.ig &> /dev/null
+touch /storage/emulated/0/.backups/com.tencent.ig &> /dev/null
+$BUSYBOX/chattr -i /storage/emulated/0/.backups/com.tencent.ig &> /dev/null
+rm -rf /storage/emulated/0/tencent/Midas/Log/com.tencent.ig &> /dev/null
+touch /storage/emulated/0/tencent/Midas/Log/com.tencent.ig &> /dev/null
+$BUSYBOX/chattr -i /storage/emulated/0/tencent/Midas/Log/com.tencent.ig &> /dev/null
+chmod -R 555 /data/media/0/MidasOversea/GUID &> /dev/null
+rm -rf /data/data/com.tencent.ig/files &>/dev/null
+rm -rf /data/data/com.tencent.ig/databases &>/dev/null
+touch /data/data/com.tencent.ig/files &> /dev/null
+rm -rf /cache/magisk.log &> /dev/null
+rm -rf /cache/magisk.log.bak &> /dev/null
+echo ""
+echo -n "ʟᴏᴀᴅɪɴɢ" ; sleep .1 ; echo -n ".." ; sleep .2 ; echo -n "." ; sleep .2 ; echo -n ".." ; sleep .1
+echo ""
+echo -n "" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; echo -n "█" ; echo -n "█" ; sleep .1 ; 
+echo ""
+echo ""
+sleep 3
+echo "╔══════════════════════════════╗"
+echo "|✪Prosess Instal Data MCPBO™ !                   |"
+echo "╚══════════════════════════════╝"
+sleep 2
+echo ""
+echo -n "ʟᴏᴀᴅɪɴɢ" ; sleep .1 ; echo -n ".." ; sleep .2 ; echo -n "." ; sleep .2 ; echo -n ".." ; sleep .1
+echo ""
+echo -n "" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; echo -n "█" ; echo -n "█" ; sleep .1 ; 
+echo ""
+sleep 1
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/cache/* &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/cacheFile.txt &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/login-identifier.txt &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/vmpcloudconfig.json &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/*json &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/UpdateInfo &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/RoleInfo &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferTmpDir &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Config/Android/AntiCheat.ini &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/puffer_temp &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/rawdata &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/ImageDownload &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs/* &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Pandora &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/rawdata &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/RoleInfo &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/TableDatas &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/UpdateInfo &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/GameErrorNoRecords &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/StatEventReportedFlag &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Intermediate/SaveGames/JKGuestRegisterCnt.json &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/Engine &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/ca-bundle.pem &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/cacheFile.txt &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/ProgramBinaryCache &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/cache &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/SaveGames/*json &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Config/Android &> /dev/null
+rm -rf /data/data/com.tencent.ig/shared_prefs/MidasOverseaIP.xml > /dev/null 2>&1
+rm -rf /data/data/com.tencent.ig/shared_prefs/HSJsonData.xml > /dev/null 2>&1
+rm -rf /data/data/com.tencent.ig/shared_prefs/gsdk_prefs.xml > /dev/null 2>&1
+rm -rf /data/data/com.tencent.ig/shared_prefs/crashrecord.xml > /dev/null 2>&1
+rm -rf /data/data/com.tencent.ig/shared_prefs/BuglySdkInfos.xml > /dev/null 2>&1
+rm -rf /data/data/com.tencent.ig/shared_prefs/com.google.android.gms.appid.xml > /dev/null 2>&1
+dd if=/dev/urandom of=/storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/core_patch_0.18.0.12625.pak bs=1400 count=985  &> /dev/null
+dd if=/dev/urandom of=/storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.18.0.12600.pak bs=1400 count=525  &> /dev/null
+dd if=/dev/urandom of=/storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/core_patch_0.18.0.12600.pak bs=1400 count=562  &> /dev/null
+dd if=/dev/urandom of=/storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/core_patch_0.18.0.12606.pak bs=1400 count=725  &> /dev/null
+sleep 1
+echo ""
+if [ ! -f "/storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.18.0.12600.pak" ];
+then
+echo ""
+echo "╔══════════════════════════════╗"
+echo " • Installasi Gagal                               "
+echo " • Data Tidak ditemukan, silahkan coba lagi       "
+echo " • Atau hubungi @gHesss_Boys                      "
+echo "╚══════════════════════════════╝"
+exit 0;
+fi
+if [ ! -f "/storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/core_patch_0.18.0.12625.pak" ];
+then
+echo ""
+echo "╔══════════════════════════════╗"
+echo " • Installasi Gagal                               "
+echo " • Data Tidak ditemukan, silahkan coba lagi       "
+echo " • Atau hubungi @gHesss_Boys                      "
+echo "╚══════════════════════════════╝"
+exit 0;
+fi
+echo "╔══════════════════════════════╗"
+echo "|✪Instalasi Data MCPBO™ Done!                    |"
+echo "╚══════════════════════════════╝"
+}
+
+
+repair()
+{
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/core_patch_0.18.0.12625.pak &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.18.0.12600.pak &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/core_patch_0.18.0.12600.pak &> /dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/core_patch_0.18.0.12606.pak &> /dev/null
+sleep 2
+echo ""
+echo -n "ʟᴏᴀᴅɪɴɢ" ; sleep .1 ; echo -n ".." ; sleep .2 ; echo -n "." ; sleep .2 ; echo -n ".." ; sleep .1
+echo ""
+echo -n "" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; echo -n "█" ; echo -n "█" ; sleep .1 ; 
+echo ""
+}
+
+
+
+sleep 2
+echo ""
+echo "Updated 20 Mei 2020 by @𝙼𝚎𝚝𝚛𝚘𝙲𝚑𝚎𝚊𝚝_𝙿𝙱𝙾™  "
+echo ""
+echo -n "Time Zone																: "
+getprop persist.sys.timezone
+sleep 1
+echo -n "GSM Operator													: "
+getprop gsm.operator.alpha
+sleep 1
+echo -n "ISO Country														: "
+getprop gsm.operator.iso-country
+sleep 1
+echo -n "Device Brand													: "
+getprop ro.product.brand
+sleep 1
+echo -n "Device Model													: "
+getprop ro.product.model
+sleep 1
+echo -n "Device Chipset											: "
+getprop ro.hardware
+echo ""
+sleep 3
+instal
+echo ""
+echo "╔══════════════════════════════╗"
+echo "| ✪[RULES]                                       |"
+echo "╚══════════════════════════════╝"
+echo "[✔] Gunakan BYPASS Script MCPBO™ v1.          "
+echo "[✔] Use BYPASS Script MCPBO™ v1.              "
+sleep 1
+echo ""
+sleep 1
+echo ""
+echo "╔══════════════════════════════╗"
+echo "| ✪FITUR SAFE :                                  |"
+echo "╚══════════════════════════════╝"
+echo "[✔] Wallhack & Collor"
+echo "[✔] Less Recoil"
+echo "[✔] Headshot 50%"
+echo "[✔] Antena Players/Ghillie"
+echo "╔══════════════════════════════╗"
+echo "| ✪Hindari Report In GAME/Dont Brutal            |"
+echo "╚══════════════════════════════╝"
+echo ""
+sleep 2
+am start -n com.xbvqitfebbloqbyh/com.xbvqitfebbloqbyh.MainActivity
+sleep 2
+am start -n bin.mt.plus/bin.mt.plus.Main
+sleep 3
+echo "╔══════════════════════════════╗"
+echo "|✪Starting PUBG MOBILE GLOBAL                    |"
+echo "╚══════════════════════════════╝"
+sleep 3
+echo ""
+echo -n "ʟᴏᴀᴅɪɴɢ" ; sleep .1 ; echo -n ".." ; sleep .2 ; echo -n "." ; sleep .2 ; echo -n ".." ; sleep .1
+echo ""
+echo -n "" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ;echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ; echo -n "█" ; sleep .1 ;echo -n "█" ; sleep .1 ; echo -n "█" ; echo -n "█" ; echo -n "█" ; sleep .1 ; 
+echo ""
+am start -n com.tencent.ig/com.epicgames.ue4.SplashActivity
+sleep 30
+PACKAGE='com.tencent.ig'
+while [ $(pidof $PACKAGE) ]
+do
+Logcleaner
+((COUNT=$COUNT+10))
+if [ ! $(pidof $PACKAGE) ]; then
+break
+fi
+sleep 10
+done
+((final=$COUNT/60))
+am force-stop com.xbvqitfebbloqbyh
+sleep 1
+am start -n bin.mt.plus/bin.mt.plus.Main
+echo ""
+echo "╔══════════════════════════════╗"
+printf "✪Game Stoped, Waktu Bermain Anda ";
+echo $final "Minutes ";
+echo "╚══════════════════════════════╝"
+echo ""
+echo "╔══════════════════════════════╗"
+echo "|✪Closing GameGuardian                           |"
+echo "╚══════════════════════════════╝"
+echo ""
+sleep 1
+echo "╔══════════════════════════════╗"
+echo "|✪PROSES FULL REPAIR DAN CLEARING CACHE          |"
+echo "╚══════════════════════════════╝"
+echo "[✔] Repairs Paks and Permission to Default !!!  "
+echo "[✔] Membersihkan Cache - Data                   "
+echo "[✔] Please Wait......                           "
+repair
+sleep 1
+echo "╔══════════════════════════════╗"
+echo "|✪Repair Data Selesai !!!!                       |"
+echo "╚══════════════════════════════╝"
+echo ""
+clearcache
+sleep 3
+echo ""
+echo "╔══════════════════════════════╗"
+echo "|✪FINISH.                                        |"
+echo "╚══════════════════════════════╝"
+echo "[✔] Now You Can Exit Script/MT Manager            "
+sleep 0
+echo ""
+echo "╔══════════════════════════════╗"
+echo "| © Coding By :                                  |"
+echo "╚══════════════════════════════╝"
+echo "• Creator MetroCheat_PBO - [MCPBO™]"
+echo ""      
+echo ""
+echo ""
+echo ""
+echo ""
+echo "             ✰||| 𝙼𝚎𝚝𝚛𝚘𝙲𝚑𝚎𝚊𝚝_𝙿𝙱𝙾™  |||✰    "
+echo ""
+killall bin.mt.plus &>/dev/null
